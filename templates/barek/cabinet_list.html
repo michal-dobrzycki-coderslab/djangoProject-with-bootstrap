@@ -1,0 +1,27 @@
+{%  extends 'barek/base.html' %}
+
+{% block content %}
+
+
+    <h2>Cabinets</h2>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Lokalizacja szafki</th>
+                <th>Ilość butelek</th>
+                <th>Akcja</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cabinet in object_list %}
+            <tr>
+                <td>{{ cabinet.location }}</td>
+                <td>100</td>
+                <td>EDYTUJ / USUŃ</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+{%  endblock %}

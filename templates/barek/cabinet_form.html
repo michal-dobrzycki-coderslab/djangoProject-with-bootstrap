@@ -1,0 +1,14 @@
+{% extends 'barek/base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_location" class="form-label">Location:</label>
+            <input class="form-control" name="location" cols="40" rows="10" required id="id_location"></input>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Save">
+    </form>
+
+{% endblock %}
