@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from barek.views import CabinetListView, CreateCabinetView
+from barek.views import CabinetListView, CreateCabinetView, CreateBottleView, CabinetDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cabinets/', CabinetListView.as_view(), name='cabinets'),
     path('cabinet/', CreateCabinetView.as_view(), name='add-cabinet'),
+    path('cabinet/<int:pk>', CabinetDetailView.as_view(), name='cabinet-detail'),
+    path('bottle/', CreateBottleView.as_view(), name='add-bottle'),
+
 ]

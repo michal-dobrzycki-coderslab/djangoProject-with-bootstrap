@@ -1,0 +1,11 @@
+{%  extends 'barek/base.html' %}
+
+{% block content %}
+
+    <h1>{{ cabinet.location }}</h1>
+
+    <div>
+    <p>{{ cabinet.bottle_set.all|join:"<br>" }}</p>
+    </div>
+
+{% endblock %}
